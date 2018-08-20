@@ -9,3 +9,12 @@ desc 'outputs hello to the terminal'
     puts "hola de Rake!"
   end
 end
+
+namespace :db do
+  task :migrate do
+    Student.create_table
+  end
+  
+  task :seed do
+  end
+end
